@@ -1,10 +1,9 @@
-# Pyramid Scaffold
+# Calculator Microservice
 
 
 ## Getting Started
 
-
-Change directory into your newly created project.
+Change directory into your project.
 ```bash
 $ cd calculator
 ```
@@ -29,8 +28,8 @@ Run your project.
 $ env/bin/pserve development.ini
 ```
 
-## Run using Docker
+## Run using Docker 🐳
 ```bash
 $ docker build -t calculator .
 $ docker run -p 6543:6543 calculator
-```; 
+```
