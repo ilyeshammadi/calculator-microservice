@@ -33,3 +33,6 @@ $ env/bin/pserve development.ini
 $ docker build -t calculator .
 $ docker run -p 6543:6543 calculator
 ```
+
+## API Specs
+[API Specs](https://github.com/Ilyes-Hammadi/calculator-microservice/tree/master/api_spec)
