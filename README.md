@@ -31,6 +31,6 @@ $ env/bin/pserve development.ini
 
 ## Run using Docker
 ```bash
-$ docker build calculator .
+$ docker build -t calculator .
 $ docker run -p 6543:6543 calculator
-```
+```; 
