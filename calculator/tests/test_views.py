@@ -16,10 +16,12 @@ class AddViewTests(unittest.TestCase):
         request = testing.DummyRequest(
             path='/add', json_body={"a": 1, "b": 1})
         response = add(request)
-        self.assertEqual(response['result'], 2)
+        self.assertEqual(response.json_body['result'], 2)
+        self.assertEqual(response.status_code, 200)
 
     def test_can_not_add(self):
         request = testing.DummyRequest(
             path='/add', json_body={"a": 1})
         response = add(request)
         self.assertEqual(response.status_code, 400)
+        self.assertEqual(response.json_body, {"message": "Invalid arguments"})

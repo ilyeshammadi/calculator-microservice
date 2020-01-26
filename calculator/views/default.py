@@ -12,8 +12,8 @@ def add(request):
     # Validate the data
     is_schema_valid = schemas.add.is_valid(data)
     if not is_schema_valid:
-        return Response(status=400, content_type='application/json')
+        return Response(json_body={"message": "Invalid arguments"}, status=400)
     validated_data = schemas.add.validate(data)
 
     result = Calculator.add(validated_data.get('a'), validated_data.get('b'))
-    return {"result": result}
+    return Response(json_body={"result": result}, status=200)
